@@ -1,0 +1,25 @@
+# Required settings
+core:
+  rpc_urls:
+    - "https://testnet-rpc.monad.xyz"
+  target_tps: 500
+  rpc_batch_size: 100
+  distribution_type: "native-direct"
+  addresses_file: "addresses.txt"
+
+# [Optional] Native token distribution settings
+token:
+  amount_per_address_low: 0.0000001
+  amount_per_address_high: 0.0000001
+  batch_sender_address: "0x1234567890123456789012345678901234567890"
+
+# [Optional] NFT distribution settings
+nft:
+  token_address: "0x1234567890123456789012345678901234567890"
+  soulbound: true
+  image_url: "https://example.com/nft.json"
+
+# [Optional] Swapper distribution settings
+swapper:
+  swapper_address: "0x1234567890123456789012345678901234567890"
+  max_swaps: 10000

@@ -1,0 +1,33 @@
+[package]
+name = "distribution"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "main"
+path = "src/bin/main.rs"
+
+[dependencies]
+alloy = { version = "0.11.1", features = ["signers", "signer-local", "rlp", "sol-types", "default", "contract"] }
+async-trait = "0.1.88"
+anyhow = "1.0"
+clap = "2.33"
+dotenv = "0.15.0"
+futures = "0.3.31"
+hex = "0.4"
+rand = "0.9.0"
+rayon = "1.10.0"
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+tokio = { version = "1.0", features = ["rt-multi-thread", "time", "sync", "macros"] }
+itertools = "0.14.0"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
